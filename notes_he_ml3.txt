@@ -1,0 +1,21 @@
+*To be done in PySpark
+
+Train
+ID,datetime,siteid,offerid,category,merchant,countrycode,browserid,devid,click
+
+Test
+ID,datetime,siteid,offerid,category,merchant,countrycode,browserid,devid
+
+#One hot encoded NOT WORKING 
+	* countrycode one-hot-encode
+	* Browsers one-hot-encode
+	* devid one-hot-encode
+#Also think datetime: is there... there may be LSTM seq prediction:: TRAIN: 2017-01-10 02:00:17.0 TO 2017-01-20 23:59:54.0;;; TEST: 2017-01-21 00:00:02.0 TO 2017-01-23 23:52:51.0
+#Instead of thinking each record as IDD; make use of the sequence
+
+TO DO
+[AFTER] 1) #Dealing with null values; Fields having null values: browserid, devid, others # Better Missing value treatment
+[DONE] 2) #ONE HOT ENCODE, STRING INDEXER#Represent categorical as categorical; Not treat them simply as numeric: FOR BROWSERS_MERGE, COUNTRYCODE, DEVICEID_ENCODE; You can use the VectorAssembler, StringIndexer and OneHotEncoder transformers to handle your categoricals.
+3) #Use Tensoflow in distributed manner
+4) LSTM MODEL MAKE
+
